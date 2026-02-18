@@ -486,13 +486,6 @@ html, body,
     to    {left:-5vw;  transform:scaleX(-1);}
 }
 
-/* ── Nuke Streamlit button chrome ──────────────── */
-section[data-testid="stHorizontalBlock"] {
-    height: 0px !important;
-    overflow: hidden !important;
-    visibility: hidden !important;
-    position: absolute !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
@@ -508,6 +501,13 @@ MODES = [
     ("funny",     "😂 Funny CV"),
     ("halloween", "🎃 Halloween"),
 ]
+
+requested_mode = st.query_params.get("mode", st.session_state.mode)
+if requested_mode not in dict(MODES):
+    requested_mode = "tech"
+
+if requested_mode != st.session_state.mode:
+    st.session_state.mode = requested_mode
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CV DATA
@@ -690,19 +690,6 @@ DATA = {
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
-# HIDDEN STREAMLIT BUTTONS (power navigation invisibly)
-# ─────────────────────────────────────────────────────────────────────────────
-# ── HIDDEN STREAMLIT BUTTONS (zero height) ──────────────────────────────────
-with st.container():
-    st.markdown('<div style="height:0px; overflow:hidden; visibility:hidden; margin:0; padding:0;">', unsafe_allow_html=True)
-    cols = st.columns(len(MODES))
-    for i, (m, lbl) in enumerate(MODES):
-        if cols[i].button(lbl, key=f"switch_{m}", use_container_width=False):
-            st.session_state.mode = m
-            st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
-# ─────────────────────────────────────────────────────────────────────────────
 # RENDER PAGE
 # ─────────────────────────────────────────────────────────────────────────────
 mode = st.session_state.mode
@@ -729,21 +716,9 @@ if mode == "halloween":
 nav_html = '<div class="nav-bar">'
 for m, label in MODES:
     active = "active" if m == mode else ""
-    nav_html += f'<span class="nav-btn {active}" onclick="triggerMode(\'{m}\')" style="cursor:pointer;">{label}</span>'
+    nav_html += f'<a class="nav-btn {active}" href="?mode={m}">{label}</a>'
 nav_html += '</div>'
-
-# JS bridge to click hidden Streamlit buttons
-js = """
-<script>
-function triggerMode(mode) {
-    const btns = parent.document.querySelectorAll('button[data-testid="baseButton-secondary"]');
-    const map = {tech:0, concrete:1, funny:2, halloween:3};
-    const idx = map[mode];
-    if (btns && btns[idx]) btns[idx].click();
-}
-</script>
-"""
-st.markdown(nav_html + js, unsafe_allow_html=True)
+st.markdown(nav_html, unsafe_allow_html=True)
 
 # ── TICKER ────────────────────────────────────────────────────────────────────
 t = d["ticker"]
