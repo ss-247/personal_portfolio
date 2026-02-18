@@ -10,16 +10,17 @@
 <style>
 /* ── RESET ─────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body,
-[data-testid="stAppViewContainer"],
-[data-testid="stAppViewContainer"] > .main {
-    background: transparent !important;
+html {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
-.block-container { padding: 0 !important; max-width: 100% !important; }
-[data-testid="stHeader"] { display: none !important; }
-#MainMenu, footer { visibility: hidden !important; }
-[data-testid="column"] { padding: 0 !important; }
-[data-testid="stVerticalBlock"] { gap: 0 !important; }
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
 
             
 
@@ -40,15 +41,16 @@ html, body,
 .nav-bar {
     display: flex;
     gap: 4px;
-    padding: 32px 40px 0;
+    padding: 24px 16px 0;
     align-items: center;
+    flex-wrap: wrap;
 }
 .nav-btn {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 8px 22px;
+    padding: 7px 14px;
     border-radius: 3px;
     border: 1px solid transparent;
     cursor: pointer;
@@ -56,6 +58,7 @@ html, body,
     background: transparent;
     opacity: 0.38;
     display: inline-block;
+    white-space: nowrap;
 }
 .nav-btn:hover  { opacity: 0.65; }
 .nav-btn.active { opacity: 1; border-color: currentColor; background: rgba(255,255,255,0.04); }
@@ -90,7 +93,7 @@ html, body,
     margin-top: 22px;
     font-size: 13px;
     line-height: 2;
-    max-width: 620px;
+    max-width: 100%;
     color: #94a3b8;
 }
 .hero-sub p { margin-bottom: 4px; }
@@ -116,12 +119,15 @@ html, body,
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
-    margin: 0 40px 32px;
+    margin: 0 16px 24px;
     border-radius: 10px;
     overflow: hidden;
 }
+@media (max-width: 480px) {
+    .stats-row { grid-template-columns: 1fr; margin: 0 16px 16px; }
+}
 .stat-box {
-    padding: 28px 24px;
+    padding: 20px 16px;
     background: #111318;
     border: 1px solid #1e2330;
 }
@@ -167,21 +173,32 @@ html, body,
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 2px;
-    padding: 0 40px 60px;
+    padding: 0 16px 60px;
 }
-@media (max-width: 800px) { .cv-layout { grid-template-columns: 1fr; } }
+@media (max-width: 800px) {
+    .cv-layout {
+        grid-template-columns: 1fr;
+        padding: 0 16px 40px;
+    }
+}
 .cv-main {
-    padding: 32px;
+    padding: 24px 20px;
     background: #111318;
     border: 1px solid #1e2330;
     border-radius: 10px 0 0 10px;
+    min-width: 0;
 }
 .cv-side {
-    padding: 28px;
+    padding: 24px 20px;
     background: #0e1015;
     border: 1px solid #1e2330;
     border-left: none;
     border-radius: 0 10px 10px 0;
+    min-width: 0;
+}
+@media (max-width: 800px) {
+    .cv-main { border-radius: 10px 10px 0 0; border-bottom: none; padding: 20px 16px; }
+    .cv-side  { border-left: 1px solid #1e2330; border-top: none; border-radius: 0 0 10px 10px; padding: 20px 16px; }
 }
 
 /* ══════════════════════════════════════════════
@@ -191,11 +208,12 @@ html, body,
     background: #0d1017;
     border: 1px solid #1e2330;
     border-radius: 8px;
-    padding: 20px 22px;
+    padding: 16px 18px;
     margin-bottom: 12px;
     position: relative;
     overflow: hidden;
     transition: border-color 0.2s, transform 0.15s;
+    word-break: break-word;
 }
 .job-card:hover { transform: translateY(-2px); }
 .job-card::before {
@@ -211,10 +229,10 @@ html, body,
     color: #64748b;
     margin-bottom: 6px;
 }
-.job-card .jc-title { font-weight: 700; font-size: 17px; color: #f1f5f9; margin-bottom: 2px; }
+.job-card .jc-title { font-weight: 700; font-size: 16px; color: #f1f5f9; margin-bottom: 2px; }
 .job-card .jc-co    { font-size: 12px; color: #64748b; margin-bottom: 12px; font-family: 'Space Mono', monospace; }
-.job-card ul        { padding-left: 18px; }
-.job-card ul li     { font-size: 13px; color: #b0bec5; line-height: 1.85; margin-bottom: 1px; }
+.job-card ul        { padding-left: 16px; }
+.job-card ul li     { font-size: 13px; color: #b0bec5; line-height: 1.85; margin-bottom: 1px; word-break: break-word; }
 
 /* ══════════════════════════════════════════════
    PROJECT CARD
@@ -268,10 +286,14 @@ html, body,
     font-size: 12px;
     font-family: 'Space Mono', monospace;
     color: #b0bec5;
-    line-height: 2.6;
-    display: flex; gap: 10px; align-items: center;
+    line-height: 2.4;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    word-break: break-word;
 }
-.contact-line .ci { color: #64748b; font-size: 13px; min-width: 20px; }
+.contact-line .ci { color: #64748b; font-size: 13px; min-width: 20px; flex-shrink: 0; }
 
 /* ══════════════════════════════════════════════
    ████  THEME: TECH  ████
@@ -480,17 +502,63 @@ html, body,
     to    {left:-5vw;  transform:scaleX(-1);}
 }
 
-/* ── Nuke Streamlit button chrome ──────────────── */
-section[data-testid="stHorizontalBlock"] {
-    height: 0px !important;
-    overflow: hidden !important;
-    visibility: hidden !important;
-    position: absolute !important;
+/* ══════════════════════════════════════════════
+   MOBILE — everything under 600px
+══════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+    /* Nav: smaller text, tighter, wraps to 2 rows cleanly */
+    .nav-bar { padding: 16px 12px 0; gap: 6px; }
+    .nav-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 1px; }
+
+    /* Hero name scales down further on tiny screens */
+    .theme-tech .hero-name      { font-size: clamp(38px, 13vw, 72px); }
+    .theme-concrete .hero-name  { font-size: clamp(42px, 14vw, 80px); }
+    .theme-funny .hero-name     { font-size: clamp(40px, 13vw, 76px); }
+    .theme-halloween .hero-name { font-size: clamp(38px, 13vw, 72px); }
+
+    /* Hero eyebrow — reduce letter-spacing so it fits */
+    .hero-eyebrow { font-size: 9px; letter-spacing: 2px; }
+
+    /* Bio text slightly smaller */
+    .hero-sub { font-size: 12px; line-height: 1.8; }
+
+    /* Links stack vertically */
+    .hero-links { flex-direction: column; gap: 8px; }
+    .hero-link  { text-align: center; padding: 10px 16px; }
+
+    /* Stats: 3 columns still work but tighter */
+    .stat-num { font-size: 32px; }
+    .theme-concrete .stat-num  { font-size: 38px; }
+    .theme-halloween .stat-num { font-size: 36px; }
+
+    /* Cards */
+    .job-card, .proj-card { padding: 14px 14px; }
+    .job-card .jc-title { font-size: 14px; }
+    .theme-concrete .job-card .jc-title { font-size: 18px; }
+    .theme-halloween .job-card .jc-title { font-size: 18px; }
+    .theme-funny .job-card .jc-title { font-size: 18px; }
+    .job-card ul li { font-size: 12px; }
+
+    /* Pills wrap naturally — just tighten them */
+    .pill { font-size: 10px; padding: 4px 10px; }
+
+    /* Ticker font smaller */
+    .ticker-inner { font-size: 10px; }
+
+    /* Reduce sec-title letter spacing */
+    .sec-title { font-size: 9px; letter-spacing: 2px; }
+}
+
+/* Prevent ANY element from causing horizontal scroll */
+.theme-tech, .theme-concrete, .theme-funny, .theme-halloween {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 </style>
 
 </head>
-<body>
+<body style="background:#0a0c10; overflow-x:hidden; width:100%; max-width:100%;">
   <div id="app"></div>
   <script>
     const MODES = [["tech", "⚡ Tech · QA · Dev"], ["concrete", "🏗️  Concrete Pro"], ["funny", "😂 Funny CV"], ["halloween", "🎃 Halloween"]];
@@ -546,6 +614,8 @@ section[data-testid="stHorizontalBlock"] {
       const edu = d.edu.map(([year,inst,qual]) => `<div class="edu-block" style="border-color:${accent}33;"><div class="e-year">${year}</div><div class="e-inst">${inst}</div><div class="e-qual">${qual}</div></div>`).join('');
 
       document.body.className = '';
+      const bgMap = {tech:'#0a0c10', concrete:'#0e0c08', funny:'#fdf6e3', halloween:'#06030e'};
+      document.body.style.background = bgMap[mode] || '#0a0c10';
       const app = document.getElementById('app');
       app.innerHTML = `
         <div class="${tc}">
