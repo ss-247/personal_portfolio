@@ -27,25 +27,20 @@
   {"@context":"https://schema.org","@type":"Person","name":"Satish Surjoo","url":"https://ss-247.github.io/portfolio/","email":"surjoo@icloud.com","telephone":"+27827882373","address":{"@type":"PostalAddress","addressLocality":"Durban","addressCountry":"ZA"},"jobTitle":"Freelance Developer & QA Engineer","description":"Web design, Python automation, Excel dashboards and fleet/stock management tools for construction, RMC and small business.","sameAs":["https://github.com/ss-247"],"knowsAbout":["Web Design","Python","Excel Automation","Streamlit","QA Testing","Project Management","Ready-Mix Concrete","Fleet Management","Stock Control","WordPress"]}
   </script>
 
-  <!-- ═══════ GOOGLE ANALYTICS ═══════
-       1. Go to analytics.google.com
-       2. Create account → property → web stream
-       3. Copy your G-XXXXXXXXXX Measurement ID
-       4. Replace BOTH instances of G-XXXXXXXXXX below
-       5. Uncomment the two script blocks
-       6. Commit & push — analytics is live
-  ════════════════════════════════════ -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- ═══════ GOOGLE ANALYTICS ═══════-->
+ 
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSYS1PY1RH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-TSYS1PY1RH');
   </script>
-  -->
+  
 
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Creepster&family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Creepster&family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Inter:wght@700;800;900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+  
 
 <style>
 /* ══ RESET ══════════════════════════════════════ */
@@ -266,8 +261,25 @@ body{width:100%;max-width:100%;overflow-x:hidden;-webkit-overflow-scrolling:touc
 
 .svc-hero{padding:48px 24px 32px;max-width:960px;margin:0 auto;}
 .svc-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#64748b;margin-bottom:16px;}
-.svc-title{font-family:'Syne',sans-serif;font-size:clamp(38px,6vw,74px);font-weight:800;color:#fff;line-height:0.9;letter-spacing:-2px;margin-bottom:24px;}
-.svc-title em{color:#94a3b8;font-style:normal;display:block;font-size:0.48em;letter-spacing:1px;font-weight:600;margin-top:8px;opacity:0.6;}
+.svc-title {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: clamp(38px, 6vw, 74px);
+    font-weight: 900;          /* or 800 for slightly less heavy */
+    color: #fff;
+    line-height: 0.92;
+    letter-spacing: -1.5px;    /* tighter than -2px for Inter */
+    margin-bottom: 24px;
+}
+.svc-title em {
+    color: #94a3b8;
+    font-style: normal;
+    display: block;
+    font-size: 0.48em;
+    letter-spacing: 0.8px;     /* reduced for cleaner look */
+    font-weight: 600;
+    margin-top: 8px;
+    opacity: 0.7;              /* slight bump for visibility */
+}
 .svc-pitch{font-size:13px;line-height:2;color:#64748b;max-width:660px;margin-bottom:32px;font-family:'Space Mono',monospace;}
 .svc-pitch strong{color:#b0bec5;font-weight:700;}
 
@@ -309,13 +321,13 @@ body{width:100%;max-width:100%;overflow-x:hidden;-webkit-overflow-scrolling:touc
 .svc-demo-card{background:#0e1117;border:1px solid #2a3040;border-radius:10px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;position:relative;overflow:hidden;}
 .svc-demo-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00f5d4,#3b82f6,#8b5cf6);}
 .svc-demo-eyebrow{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#00f5d4;margin-bottom:8px;}
-.svc-demo-name{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;}
+.svc-demo-name{font-family:'Roboto Slab',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:8px;}
 .svc-demo-desc{font-size:12px;color:#64748b;line-height:1.8;font-family:'Space Mono',monospace;max-width:500px;}
 .svc-demo-btn{display:inline-block;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#00f5d4;text-decoration:none;border:1px solid #00f5d433;padding:12px 24px;border-radius:4px;white-space:nowrap;transition:all 0.2s;background:#00f5d408;}
 .svc-demo-btn:hover{background:#00f5d418;border-color:#00f5d466;transform:translateY(-2px);}
 
 .svc-bottom-cta{max-width:960px;margin:0 auto;padding:0 24px 80px;text-align:center;}
-.svc-bottom-title{font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-1px;}
+.svc-bottom-title{font-family:'Inter',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-1px;}
 .svc-bottom-sub{font-family:'Space Mono',monospace;font-size:12px;color:#4a5568;margin-bottom:28px;line-height:1.8;}
 .svc-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .svc-btn-p{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#080a0e;background:#e2e8f0;text-decoration:none;padding:14px 28px;border-radius:4px;font-weight:700;transition:all 0.2s;}
@@ -481,7 +493,7 @@ function renderServices(nav){
   <div class="svc-hero">
     <div class="svc-eyebrow">Available for Freelance · Durban &amp; Remote</div>
     <div class="svc-title">I BUILD TOOLS<em>for the industries I know.</em></div>
-    <p class="svc-pitch"><strong>13 years on the plant floor.</strong> 3 years in regulated software QA. Now I build websites, automation tools and dashboards that solve real operational problems — not generic solutions, but systems built by someone who has actually worked in your industry.<br><br>My target clients are <strong>construction businesses, RMC plants, fleet operators, truck managers and small business owners</strong> who are still doing things manually and know they shouldn't be.</p>
+    <p class="svc-pitch"><strong>13 years hands-on in ready-mix concrete plants</strong> and 3 years in regulated software QA have given me a clear view of the daily challenges operators face. Today, I create custom websites, automation tools, and dashboards designed to solve real operational problems — built from the perspective of someone who’s actually been in your shoes, not just theorizing from the outside.<br><br>I work primarily with <strong>construction companies, ready-mix plants, fleet operators, truck managers, and small business owners</strong> who are still handling key processes manually and are ready for smarter, more efficient systems that fit their workflow.</p>
     <div class="market-strip">
       <span class="market-tag">🏗️ Construction</span>
       <span class="market-tag">🚛 Fleet &amp; Logistics</span>
@@ -497,13 +509,13 @@ function renderServices(nav){
     <div class="svc-card c1">
       <span class="svc-icon">🌐</span>
       <div class="svc-name">Website Design</div>
-      <div class="svc-tagline">Custom-built. Fast. Mobile-first. No page builders.</div>
-      <ul class="svc-bullets">
-        <li>Hand-coded HTML/CSS/JS — no bloated templates</li>
+      <div class="svc-tagline">Custom-built. Fast. Mobile-first. Functional</div>
+      <ul class="svc-bullets">        
         <li>Portfolio sites, landing pages, business websites</li>
         <li>Optimised for mobile and fast on slow connections</li>
         <li>SEO-ready from day one</li>
         <li>Ideal for contractors, suppliers, plant operators</li>
+        <li>Hand coded HTML/CSS/JS. </li>
       </ul>
       <a class="svc-cta-link" href="mailto:surjoo@icloud.com?subject=Website Design Enquiry">Let's talk</a>
     </div>
@@ -568,17 +580,17 @@ function renderServices(nav){
         <li>Stock management and inventory control systems</li>
         <li>Designed specifically for construction and RMC</li>
         <li>Built on Excel or Python — no expensive licensing</li>
-        <li>I've run these systems. I know what breaks them.</li>
+        <li>Run locally or on the web</li>
       </ul>
       <a class="svc-cta-link" href="mailto:surjoo@icloud.com?subject=Fleet &amp; Stock System Enquiry">Let's talk</a>
     </div>
   </div>
-  <div class="svc-sec-title" style="margin-top:8px;">Live Proof of Work</div>
+  <div class="svc-sec-title" style="margin-top:8px;">Online</div>
   <div class="svc-demo-wrap">
     <div class="svc-demo-card">
       <div>
         <div class="svc-demo-eyebrow">Live App · Python + Streamlit</div>
-        <div class="svc-demo-name">FleetCost — Truck Cost Management</div>
+        <div class="svc-demo-name">FleetCost: Truck Cost Management</div>
         <p class="svc-demo-desc">A real fleet management and cost-tracking application built for truck operators. Tracks fuel logs, expenses, maintenance costs and generates per-vehicle reports. Multi-tenant, live, deployed. This is exactly the kind of tool I build for clients.</p>
       </div>
       <a class="svc-demo-btn" href="https://fleetcost.streamlit.app/" target="_blank" rel="noopener">View Live App</a>
