@@ -283,7 +283,7 @@ body{width:100%;max-width:100%;overflow-x:hidden;-webkit-overflow-scrolling:touc
 .svc-pitch{font-size:13px;line-height:2;color:#64748b;max-width:660px;margin-bottom:32px;font-family:'Space Mono',monospace;}
 .svc-pitch strong{color:#b0bec5;font-weight:700;}
 
-.market-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #1e2330;}
+.market-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;padding-bottom:10px;}
 .market-tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;background:#111318;border:1px solid #2a3040;border-radius:3px;color:#64748b;}
 
 .svc-sec-title{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#64748b;margin-bottom:20px;display:flex;align-items:center;gap:12px;padding:0 24px;max-width:960px;margin-left:auto;margin-right:auto;}
@@ -402,7 +402,7 @@ const DATA={
       ["2017 – 2018","Plant Supervisor","On-Time Readymix",["Supervised plant operations and maintained production schedules under high-demand conditions."]],
       ["2006 – 2015","Supervisor / Batcher / Sales","Lafarge Readymix",["High-volume batching, sales & orders, and scheduling logistics for major civil projects.","Built custom Excel automation tools for stock management and production planning."]]
     ],
-    projects:[["Cement Tracker","Python + Excel dashboard consolidating live supplier data across multiple formats"],["Punters Challenge","Sports prediction web app with real-time leaderboard and scoring engine"],["Moses Mabhida Stadium","QA & project coordination on major civil infrastructure delivery"],["Ixopo Dam","Plant supervision & concrete logistics for large-scale civil works"]],
+    projects:[["Cement Tracker","Python + Excel dashboard consolidating live supplier data across multiple formats"],["Punters Challenge","QA & PM tasks on initial release of sports betting app"],["Moses Mabhida Stadium","Plant supervision & batching high quality concrete"],["Ixopo Dam","Plant supervision & concrete logistics for large-scale civil works"]],
     skills:["Project Management","Software QA & Testing","Git / GitHub","Python","SQL","VBA","Excel — Advanced","Data Analysis","Agile / Scrum","Stakeholder Communication","Process Automation","Compliance & Regulatory"],
     tools:["Python","Streamlit","Git / GitHub","Microsoft 365","Excel / VBA","SQL","GitHub Actions"],
     edu:[["2019","Hyperion Dev","Software Engineering Bootcamp"],["2016","Upskillist","Microsoft Excel — Advanced"],["2001","Phoenix Technical Secondary","Matric"]],
@@ -504,6 +504,19 @@ function renderServices(nav){
       <span class="market-tag">🌍 Remote Clients</span>
     </div>
   </div>
+
+  <div class="svc-sec-title" style="margin-top:8px;">Online</div>
+  <div class="svc-demo-wrap">
+    <div class="svc-demo-card">
+      <div>
+        <div class="svc-demo-eyebrow">Live App · Python + Streamlit</div>
+        <div class="svc-demo-name">FleetCost: Truck Cost Management</div>
+        <p class="svc-demo-desc">A real fleet management and cost-tracking application built for truck operators. Tracks fuel logs, expenses, maintenance costs and generates per-vehicle reports. Check it out, Log in with Google, auto creates an account. Free to try.</p>
+      </div>
+      <a class="svc-demo-btn" href="https://fleetcost.streamlit.app/" target="_blank" rel="noopener">View Live App</a>
+    </div>
+  </div>
+
   <div class="svc-sec-title">What I Build</div>
   <div class="svc-grid">
     <div class="svc-card c1">
@@ -585,20 +598,10 @@ function renderServices(nav){
       <a class="svc-cta-link" href="mailto:surjoo@icloud.com?subject=Fleet &amp; Stock System Enquiry">Let's talk</a>
     </div>
   </div>
-  <div class="svc-sec-title" style="margin-top:8px;">Online</div>
-  <div class="svc-demo-wrap">
-    <div class="svc-demo-card">
-      <div>
-        <div class="svc-demo-eyebrow">Live App · Python + Streamlit</div>
-        <div class="svc-demo-name">FleetCost: Truck Cost Management</div>
-        <p class="svc-demo-desc">A real fleet management and cost-tracking application built for truck operators. Tracks fuel logs, expenses, maintenance costs and generates per-vehicle reports. Multi-tenant, live, deployed. This is exactly the kind of tool I build for clients.</p>
-      </div>
-      <a class="svc-demo-btn" href="https://fleetcost.streamlit.app/" target="_blank" rel="noopener">View Live App</a>
-    </div>
-  </div>
+  
   <div class="svc-bottom-cta">
     <div class="svc-bottom-title">Ready to get something built?</div>
-    <p class="svc-bottom-sub">Tell me what problem you're trying to solve.<br>I'll be straight with you about what it takes.</p>
+    <p class="svc-bottom-sub">Tell me what problem you're trying to solve.<br>We can chat about a digital solution.</p>
     <div class="svc-btns">
       <a class="svc-btn-p" href="mailto:surjoo@icloud.com?subject=Project Enquiry">✉️ &nbsp;surjoo@icloud.com</a>
       <a class="svc-btn-s" href="tel:+27827882373">📞 &nbsp;0827882373</a>
@@ -661,7 +664,7 @@ function render(mode){
     </div>
   </div>
   <div style="text-align:center;padding:44px 0 64px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:${accent};opacity:0.28;text-transform:uppercase;">
-    Satish Surjoo &nbsp;·&nbsp; Durban, South Africa &nbsp;·&nbsp; Available for Freelance
+    Satish Surjoo &nbsp;·&nbsp; Durban, South Africa &nbsp;·&nbsp; 
   </div>
 </div>`;
   bindNav();
