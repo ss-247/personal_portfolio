@@ -113,7 +113,11 @@ function bindMusicButton(){
   const audio=document.getElementById('ecrPlayer');
   if(!btn||!audio) return;
 
-  audio.src=MUSIC_STREAM_URL;
+  if(audio.getAttribute('src')!==MUSIC_STREAM_URL){
+    audio.src=MUSIC_STREAM_URL;
+  }
+
+  isPlaying=!audio.paused;
   updateMusicButtonText();
 
   btn.addEventListener('click',()=>toggleMusic());
