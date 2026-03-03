@@ -91,6 +91,7 @@ const PILL_S={
   halloween:"background:#bf5cf315;border:1px solid #bf5cf333;color:#d490ff;"
 };
 const BG={tech:'#0a0c10',concrete:'#0e0c08',funny:'#fdf6e3',halloween:'#06030e',services:'#080a0e'};
+const MUSIC_STREAM_URL='https://edge.iono.fm/xice/ecr_live_high.aac';
 let isPlaying=false;
 let currentMode='services';
 
@@ -112,8 +113,7 @@ function bindMusicButton(){
   const audio=document.getElementById('ecrPlayer');
   if(!btn||!audio) return;
 
-  // Keep currently playing stream alive across in-page re-renders.
-  // Do not reset src here, otherwise playback restarts when navigating modes.
+  audio.src=MUSIC_STREAM_URL;
   updateMusicButtonText();
 
   btn.addEventListener('click',()=>toggleMusic());
