@@ -360,4 +360,4 @@ function render(mode){
   window.location.hash=mode;
 }
 
-render(window.location.hash.replace('#','')||'services');
+render(window.location.hash.replace('#','')||'tech');
