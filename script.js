@@ -24,7 +24,7 @@ const DATA={
     tools:["Python","Streamlit","Git / GitHub","Microsoft 365","Excel / VBA","SQL","GitHub Actions"],
     edu:[["2019","Hyperion Dev","Software Engineering Bootcamp"],["2016","Upskillist","Microsoft Excel — Advanced"],["2001","Phoenix Technical Secondary","Matric"]],
     contact:[["📞","<a href='tel:+27827882373'>0827882373</a>"],["✉️","<a href='mailto:surjoo@icloud.com'>surjoo@icloud.com</a>"],["📍","<a href='https://maps.google.com/?q=Durban,South+Africa' target='_blank' rel='noopener'>Durban, South Africa</a>"],["🐙","<a href='https://github.com/ss-247' target='_blank' rel='noopener'>github.com/ss-247</a>"]],
-    links:[["🌐 Old Portfolio","https://ss247.github.io/Satish_Surjoo_profile/"],["⚡ Live Streamlit App","https://fleetcost.streamlit.app/"],["⚡ Sample Website Design","https://ss-247.github.io/services"]]
+    links:[["🌐 Old Portfolio","https://ss247.github.io/Satish_Surjoo_profile/"],["⚡ Live Streamlit App","https://fleetcost.streamlit.app/"],["⚡ Sample Website Design","https://ss247.netlify.app/"]]
   },
   concrete:{
     eyebrow:"RMC PLANT SUPERVISOR · BATCHER · SCHEDULER",
@@ -42,7 +42,7 @@ const DATA={
     tools:["Batchman","AS400","Microsoft Excel","VBA","MS Teams","Python (custom tools)"],
     edu:[["2019","Hyperion Dev","Software Engineering Bootcamp"],["2016","Upskillist","MS Excel — Advanced"],["2001","Phoenix Technical Secondary","Matric"]],
     contact:[["📞","<a href='tel:+27827882373'>0827882373</a>"],["✉️","<a href='mailto:surjoo@icloud.com'>surjoo@icloud.com</a>"],["📍","<a href='https://maps.google.com/?q=Durban,South+Africa' target='_blank' rel='noopener'>Durban, South Africa</a>"],["🐙","<a href='https://github.com/ss-247' target='_blank' rel='noopener'>github.com/ss-247</a>"]],
-    links:[["🌐 Portfolio","https://ss247.github.io/Satish_Surjoo_profile/"],["⚡ Streamlit App","https://fleetcost.streamlit.app/"],["⚡ Sample Website Design","https://ss-247.github.io/services"]]
+    links:[["🌐 Portfolio","https://ss247.github.io/Satish_Surjoo_profile/"],["⚡ Streamlit App","https://fleetcost.streamlit.app/"],["⚡ Sample Website Design","https://ss247.netlify.app/"]]
   },
   funny:{
     eyebrow:"🏆 PROFESSIONAL BUG WHISPERER · CONCRETE PHILOSOPHER · EXCEL SORCERER 🧙",
@@ -60,7 +60,7 @@ const DATA={
     tools:["Coffee ☕ (primary tool)","Python 🐍","Excel (100 tabs open)","Git (blame mode: ON)","AS400 (pray before using)","Batchman (the mixer, not the hero)"],
     edu:[["2019","Hyperion Dev","Software Bootcamp — SURVIVED 🎉"],["2016","Upskillist","Excel Advanced (I dream in VLOOKUP)"],["2001","Phoenix Secondary","Matric — Phase 1 Complete ✅"]],
     contact:[["📞","<a href='tel:+27827882373'>0827882373 (please not before 9am)</a>"],["✉️","<a href='mailto:surjoo@icloud.com'>surjoo@icloud.com</a>"],["📍","<a href='https://maps.google.com/?q=Durban,South+Africa' target='_blank' rel='noopener'>Durban (warm, near beach, highly rated)</a>"],["🐙","<a href='https://github.com/ss-247' target='_blank' rel='noopener'>github.com/ss-247 (commit log = therapy)</a>"]],
-    links:[["🌐 Old Portfolio (2019 vibes)","https://ss-247.github.io/Satish_Surjoo_profile/"],["⚡ Streamlit — I built stuff here","https://fleetcost.streamlit.app/"],["⚡ Sample Free Click Now","https://ss-247.github.io/services"]]
+    links:[["🌐 Old Portfolio (2019 vibes)","https://ss-247.github.io/Satish_Surjoo_profile/"],["⚡ Streamlit — I built stuff here","https://fleetcost.streamlit.app/"],["⚡ Sample Free Click Now","https://ss247.netlify.app/"]]
   },
   halloween:{
     eyebrow:"☠️ LURKER OF LEGACY CODE · HAUNTER OF DEADLINES · SPIRIT OF QA ☠️",
@@ -78,7 +78,7 @@ const DATA={
     tools:["🐍 Python (serpent magic)","💀 Git / GitHub (the eternal grimoire)","🎃 Excel / VBA (ancient runes)","👻 SQL (dark queries from the deep)","🕯️ Batchman (golem controller)","☠️ AS400 (elder relic — use with caution)"],
     edu:[["2019","Hyperion Dev","Software Engineering — The Dark Arts"],["2016","Upskillist","Excel Sorcery, Advanced Tier"],["2001","Phoenix Secondary","Survived The Matric Curse"]],
     contact:[["☠️","<a href='tel:+27827882373'>0827882373</a>"],["🦇","<a href='mailto:surjoo@icloud.com'>surjoo@icloud.com</a>"],["🎃","<a href='https://maps.google.com/?q=Durban,South+Africa' target='_blank' rel='noopener'>Durban, The Haunted Coast</a>"],["🕸️","<a href='https://github.com/ss-247' target='_blank' rel='noopener'>github.com/ss-247</a>"]],
-    links:[["🕯️ Old Lair (Portfolio)","https://ss247.github.io/Satish_Surjoo_profile/"],["🔮 Streamlit Sanctum","https://fleetcost.streamlit.app/"],["⚡ Do Not Click Here","https://ss-247.github.io/services"]]
+    links:[["🕯️ Old Lair (Portfolio)","https://ss247.github.io/Satish_Surjoo_profile/"],["🔮 Streamlit Sanctum","https://fleetcost.streamlit.app/"],["⚡ Do Not Click Here","https://ss247.netlify.app/"]]
   }
 };
 
@@ -154,8 +154,9 @@ function renderServices(nav){
   <div class="ticker-wrap"><div class="ticker-inner">${('WEB DESIGN · PYTHON TOOLS · EXCEL AUTOMATION · DASHBOARDS · WORDPRESS · FLEET SYSTEMS · STOCK CONTROL · DURBAN · SOUTH AFRICA · ').repeat(4)}</div></div>
   <div class="svc-hero">
     <div class="svc-eyebrow">Developer · Durban &amp; Remote</div>
-    <div class="svc-title">I BUILD TOOLS<em>for the industries I know.</em></div>
-    <p class="svc-pitch"><strong>13 years hands-on in ready-mix concrete plants</strong> and 3 years in regulated software QA have given me a clear view of the daily challenges operators face. Today, I create custom websites, automation tools, and dashboards designed to solve real operational problems — built from the perspective of someone who’s actually been in your shoes, not just theorizing from the outside.<br><br>I work primarily with <strong>construction companies, ready-mix plants, fleet operators, truck managers, and small business owners</strong> who are still handling key processes manually and are ready for smarter, more efficient systems that fit their workflow.</p>
+    <div class="svc-title">I BUILD PRACTICAL TOOLS<em>for teams and businesses that run on spreadsheets</em></div>
+    <p class="svc-pitch"><strong>13+ years running concrete plants + 3 years in regulated software QA</strong> taught me what actually breaks workflows and what fixes them fast.<br><br>
+          Today I build custom Python dashboards, automation scripts, advanced Excel tools, and responsive websites that solve operational headaches for construction ops, fleet managers, logistics teams, regulated businesses, and any operation tired of manual drudgery.</p>
     <div class="market-strip">
       <span class="market-tag">🏗️ Construction</span>
       <span class="market-tag">🚛 Fleet &amp; Logistics</span>
@@ -188,7 +189,7 @@ function renderServices(nav){
         <div class="svc-demo-name">DevCraft: Demo Website</div>
         <p class="svc-demo-desc">A sample website with demo features you can click through. Listen to some music while you browse this page Read the latest stories in andaround Durban.</p>
       </div>
-      <a class="svc-demo-btn" href="https://ss-247.github.io/services" target="_blank" rel="noopener">Sample Web Design</a>
+      <a class="svc-demo-btn" href="https://ss247.netlify.app/" target="_blank" rel="noopener">Sample Web Design</a>
     </div>
   </div>
 
